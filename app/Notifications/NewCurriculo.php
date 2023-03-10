@@ -44,7 +44,7 @@ class NewCurriculo extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->line('Você cadastrou um currículo no nosso site fdcom as informações: ')
+            ->line('Você cadastrou um currículo no nosso site com as informações: ')
             ->line($this->curriculo->name)
             ->line($this->curriculo->last_name)
             ->line($this->curriculo->email)
