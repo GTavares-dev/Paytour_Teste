@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('date_send');
             $table->string('hour_send');
             $table->timestamps();
+            $table->string('path');
         });
     }
 

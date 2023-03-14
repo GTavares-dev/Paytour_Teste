@@ -29,7 +29,7 @@ class CurriculoFormRequest extends FormRequest
             'name'    => 'required|min:3|max:150',
             'last_name' => 'required|min:3|max:150',
             'email'   => 'required|email|unique:curriculo',
-            'phone' => 'required|min:9|max:12',
+            'phone' => 'numeric|min:11',
             'comment' => 'nullable|min:5|max:1500',
             'desiredjob' => 'required',
             'schooling' => 'required',

@@ -20,8 +20,6 @@ class CurriculoMail extends Mailable
      */
     protected $curriculo;
 
-
-
     /**
      * Create a new message instance.
      *
@@ -41,9 +39,9 @@ class CurriculoMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: new Address('contato@paytour.com.br', 'Gabriel Tavares'),
+            from: new Address(config('mail.from.address'), 'Gabriel Tavares'),
             subject: 'Currículo enviado com sucesso!',
-            to: env(key: 'MAIL_FROM_ADDRESS'),
+            to: config('mail.from.address'),
 
         );
     }
@@ -56,7 +54,7 @@ class CurriculoMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'newCurriculoMail',
+            view: 'contact.message',
             with: [
                 'name' => $this->curriculo->name,
                 'last_name' => $this->curriculo->last_name,
@@ -69,6 +67,7 @@ class CurriculoMail extends Mailable
                 'date_send' => $this->curriculo->date_send,
                 'hour_send' => $this->curriculo->hour_send,
                 'file' => $this->curriculo->file,
+
             ]
         );
     }
@@ -81,7 +80,7 @@ class CurriculoMail extends Mailable
     public function attachments()
     {
         return [
-            Attachment::fromStorage($this->curriculo->file)
+            Attachment::fromStorage($this->curriculo->path)
                 ->as($this->curriculo->name .  ' -Curriculo.pdf')
                 ->withMime('application/pdf'),
         ];

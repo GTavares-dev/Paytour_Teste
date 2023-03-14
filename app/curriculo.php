@@ -20,5 +20,6 @@ class Curriculo extends Model
         'user_ip',
         'date_send',
         'hour_send',
+        'path',
     ];
 }
