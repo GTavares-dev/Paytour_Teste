@@ -1,6 +1,6 @@
 <?php
 
-use App\Curriculo;
+use App\Models\Curriculo;
 use Illuminate\Support\Facades\Route;
 
 

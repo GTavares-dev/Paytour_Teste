@@ -2,7 +2,7 @@
 
 namespace app\Http\Controllers;
 
-use App\Curriculo;
+use App\Models\Curriculo;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CurriculoFormRequest;
 use App\Mail\CurriculoMail;

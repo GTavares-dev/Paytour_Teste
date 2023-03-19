@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use App\Curriculo;
+use App\Models\Curriculo;
 use App\Mail\CurriculoMail;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Mail;

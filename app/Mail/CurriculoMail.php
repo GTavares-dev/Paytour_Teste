@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Curriculo;
+use App\Models\Curriculo;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
