@@ -170,7 +170,6 @@
                             </button>
                         </div>
                     </div>
-                    <input type="hidden" name="user_ip" value="<?php echo e($_SERVER['REMOTE_ADDR']); ?>">
                 </form>
             </div>
         </div>
