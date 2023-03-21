@@ -40,9 +40,9 @@ class CurriculoController extends Controller
             'path' => $path,
         ]);
 
-        $Curriculo = Curriculo::create($data);
+        $curriculo = Curriculo::create($data);
 
-        Mail::to(config('mail.from.address'))->send(new CurriculoMail($Curriculo));
+        Mail::to(config('mail.from.address'))->send(new CurriculoMail($curriculo));
 
 
 
